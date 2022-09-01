@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:ital,wght@0,400;1,300&display=swap');
 
 :root {
     --main-color: #6DBFE2;
+    --subtext: 'Open Sans', sans-serif;
 }
 
 * {
@@ -174,6 +176,55 @@ form button:hover {
     margin: auto;
 }
 
+.btn {
+    height: 30px;
+    width: 100px;
+    background-color: var(--main-color);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5 ease;
+}
+
+.btn:hover {
+    background-color: tomato;
+}
+
+.h1-style {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--main-color);
+    position: relative;
+}
+
+.h1-style::before {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 150px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.h1-style::after {
+    position: absolute;
+    /* Trang kí tự trong HTML */
+    content: "\2665";
+    height: 20px;
+    width: 40px;
+    color: red;
+    background-color: #fff;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* --------------- Nice place */
+
 .nice-place-item {
     width: 30%;
     height: 400px;
@@ -181,7 +232,7 @@ form button:hover {
     overflow: hidden;
 }
 
-.nice-place-item:hover .nice-place-text{
+.nice-place-item:hover .nice-place-text {
     transform: translateX(0%);
 }
 
@@ -198,106 +249,121 @@ form button:hover {
     height: 200px;
     bottom: 0;
     padding: 12px;
-    background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(255,255,255,0));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
     transform: translateX(-100%);
     /* Dùng over flow ở trên */
     transition: all 0.5s ease;
 }
 
-.nice-place-text h2{
+.nice-place-text h2 {
     color: var(--main-color);
 }
 
-.nice-place-text i{
+.nice-place-text i {
     color: yellow;
 }
 
-.nice-place-text p{
-    color:#fff;
+.nice-place-text p {
+    color: #fff;
     margin: 12px;
 }
-
-.nice-place-text button {
-    height: 30px;
-    width: 100px;
-    background-color: var(--main-color);
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.5 ease;
-}
-
-.nice-place-text button:hover {
-    background-color: tomato;
-}
-
-.nice-place h1 {
-    text-align: center;
-    margin-bottom: 50px;
-    color: var(--main-color);
-    position: relative;
-}
-
-.nice-place h1::before {
-    position: absolute;
-    content: "";
-    height: 5px;
-    width: 150px;
-    background-color: var(--main-color);
-    border-radius: 5px;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.nice-place h1::after {
-    position: absolute;
-    /* Trang kí tự trong HTML */
-    content: "\2665";
-    height: 20px;
-    width: 40px;
-    color: red;
-    background-color: #fff;
-    bottom: -18px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 /* About */
 
 .about {
     padding: 100px 0;
 }
 
-.about h1 {
-    text-align: center;
-    margin-bottom: 50px;
+.about-content-left {
+    width: 50%;
+}
+
+.about-content-left img {
+    width: 100%;
+}
+
+.about-content-right {
+    width: 50%;
+    padding-left: 50px;
+}
+
+.about-content-right h2{
+    font-family: var(--subtext);
+    font-weight: normal;
     color: var(--main-color);
-    position: relative;
 }
 
-.about h1::before {
-    position: absolute;
-    content: "";
-    height: 5px;
-    width: 150px;
-    background-color: var(--main-color);
+.about-content-right p{
+    font-family: var(--subtext);
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+/* ------------------Service */
+
+.service {
+    margin-top: 30px;
+
+}
+
+.service-item {
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    background-color: #b6dcec;
     border-radius: 5px;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+    transition: all 0.3s ease;
 }
 
-.about h1::after {
-    position: absolute;
-    /* Trang kí tự trong HTML */
-    content: "\2665";
-    height: 20px;
-    width: 40px;
-    color: red;
-    background-color: #fff;
-    bottom: -18px;
-    left: 50%;
-    transform: translateX(-50%);
+.service-item:hover {
+    box-shadow: 2px 2px 10px black;
 }
+
+.service-item img{
+    width: 150px;
+    margin-bottom: 6px;
+}
+
+
+/* ------------------Tour 2022 */
+.tour {
+    padding: 100px 0;
+
+}
+
+.tour-content-item {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 12px;
+}
+
+.tour-content-item:nth-child(even){
+    flex-direction: column-reverse;
+}
+
+.tour-content-item-img {
+    width: 50%;
+    height: 300px;
+}
+
+.tour-content-item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tour-content-item-text {
+    width: 50%;
+    padding: 20px 0 0 50px;
+}
+
+.tour-content-item-text h2 {
+    font-family: var(--subtext);
+    font-weight: normal;
+    color: var(--main-color);
+}
+
+.tour-content-item-text p {
+    font-family: var(--subtext);
+    font-size: 18px;
+    margin: 20px 0;
+}
+
