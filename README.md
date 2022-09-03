@@ -13,3 +13,6 @@ FTP username:	b11_32516318
 FTP password:	**********
 FTP host name:	ftp.byethost11.com
 Your Website URL:	http://traveling2022.byethost11.com -->
+<!-- Tam992001 -->
+
+<!-- Dùng fizeZila để up src code lên cho nhanh -->
