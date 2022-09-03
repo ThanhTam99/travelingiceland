@@ -417,6 +417,7 @@ form button:hover {
 }
 
 /* --------------------------Responsive */
+/* 414-736 */
 @media (max-width: 575px) {
     .header-content {
         width: 100%;
